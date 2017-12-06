@@ -1,0 +1,76 @@
+/*****************************************************/
+// cookie
+var _cookie = {};
+_cookie.getCookie = function(name) {
+    var r = new RegExp( name + "=(.*?)(;|$)");
+    var arr = document.cookie.match(r)
+    if(arr && arr.length>=2) return arr[1];
+    return "";
+};
+_cookie.setCookie=function(name, value, expires, path, domain, secure) {
+    document.cookie = name + "=" + escape(value) +
+        ((expires) ? "; expires=" + expires : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
+};
+/******************************************************/
+// url
+var _url = {};
+_url.getUrlParam = function(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+};
+/******************************************************/
+// str
+var _str = {};
+_str.isBlank = function(str) {
+    if (str == null) return true;
+    if (str == "") return true;
+    var reg = new RegExp("^[ ]+$");
+    return reg.test(str);
+};
+_str.isNotBlank = function(str) {
+    return !this.isBlank(str);
+};
+/******************************************************/
+// dsp
+var dsp = {};
+dsp.isDsp = function(channel) {
+    if(_str.isBlank(channel)) {
+        return false;
+    }
+    var emar = '0050002'; // 亿玛DSP渠道号
+    var wonnder = '0050001'; // 青稞万维渠道号
+    if(channel == emar || channel == wonnder) {
+        return true;
+    }
+    return false;
+};
+dsp.getChannel = function(g_f) {
+    return g_f.substr(0, 7);
+};
+dsp.loadDspJs = function() {
+    var url = _url.getUrlParam('g_f');
+    var g_f;
+    if(_str.isNotBlank(url)) {
+        g_f = url;
+    } else {
+        var cookie = _cookie.getCookie('g_f');
+        if (_str.isBlank(cookie)) return;
+        g_f = cookie;
+    }
+    var channel = this.getChannel(g_f);
+    if (!this.isDsp(channel)) {
+        return;
+    }
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://static.nyonline.cn/dsp/channel/' + channel +'.js';
+    var h = document.getElementsByTagName('head')[0];
+    if(h) {
+        h.appendChild(s);
+    }
+}

@@ -1,0 +1,232 @@
+2017-11-22 14:28:04  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:28:04  [ localhost-startStop-1:116 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:28:04 CST 2017]; root of context hierarchy
+2017-11-22 14:28:04  [ localhost-startStop-1:179 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:28:05  [ localhost-startStop-1:1679 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:28:05  [ localhost-startStop-1:1699 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:28:05  [ localhost-startStop-1:1745 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:28:05  [ localhost-startStop-1:1980 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:28:05  [ localhost-startStop-1:1995 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:28:05  [ localhost-startStop-1:1995 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:28:10  [ localhost-startStop-1:6127 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 6121 ms
+2017-11-22 14:28:10  [ localhost-startStop-1:6184 ] - [ INFO ]  FrameworkServlet 'taotao-manager-web': initialization started
+2017-11-22 14:28:10  [ localhost-startStop-1:6185 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'taotao-manager-web-servlet': startup date [Wed Nov 22 14:28:10 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:28:10  [ localhost-startStop-1:6185 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:28:10  [ localhost-startStop-1:6372 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:28:10  [ localhost-startStop-1:6591 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.handler.MappedInterceptor#2': Cannot create inner bean 'com.wz.interceptor.LoginInterceptor#0' of type [com.wz.interceptor.LoginInterceptor] while setting constructor argument; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.wz.interceptor.LoginInterceptor] for bean with name 'com.wz.interceptor.LoginInterceptor#0' defined in class path resource [spring/springmvc.xml]; nested exception is java.lang.ClassNotFoundException: com.wz.interceptor.LoginInterceptor
+2017-11-22 14:28:10  [ localhost-startStop-1:6591 ] - [ ERROR ]  Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.handler.MappedInterceptor#2': Cannot create inner bean 'com.wz.interceptor.LoginInterceptor#0' of type [com.wz.interceptor.LoginInterceptor] while setting constructor argument; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.wz.interceptor.LoginInterceptor] for bean with name 'com.wz.interceptor.LoginInterceptor#0' defined in class path resource [spring/springmvc.xml]; nested exception is java.lang.ClassNotFoundException: com.wz.interceptor.LoginInterceptor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.handler.MappedInterceptor#2': Cannot create inner bean 'com.wz.interceptor.LoginInterceptor#0' of type [com.wz.interceptor.LoginInterceptor] while setting constructor argument; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.wz.interceptor.LoginInterceptor] for bean with name 'com.wz.interceptor.LoginInterceptor#0' defined in class path resource [spring/springmvc.xml]; nested exception is java.lang.ClassNotFoundException: com.wz.interceptor.LoginInterceptor
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:313)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:122)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:534)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1170)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:310)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.detectMappedInterceptors(AbstractHandlerMapping.java:272)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.initApplicationContext(AbstractHandlerMapping.java:247)
+	at org.springframework.context.support.ApplicationObjectSupport.initApplicationContext(ApplicationObjectSupport.java:120)
+	at org.springframework.web.context.support.WebApplicationObjectSupport.initApplicationContext(WebApplicationObjectSupport.java:76)
+	at org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(ApplicationObjectSupport.java:74)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:119)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	... 27 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.wz.interceptor.LoginInterceptor] for bean with name 'com.wz.interceptor.LoginInterceptor#0' defined in class path resource [spring/springmvc.xml]; nested exception is java.lang.ClassNotFoundException: com.wz.interceptor.LoginInterceptor
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: com.wz.interceptor.LoginInterceptor
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:250)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:394)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1344)
+	... 53 more
+2017-11-22 14:29:46  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:29:46  [ localhost-startStop-1:92 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:29:46 CST 2017]; root of context hierarchy
+2017-11-22 14:29:46  [ localhost-startStop-1:139 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:29:46  [ localhost-startStop-1:264 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:29:46  [ localhost-startStop-1:295 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:29:46  [ localhost-startStop-1:342 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:29:47  [ localhost-startStop-1:538 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:29:47  [ localhost-startStop-1:554 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:29:47  [ localhost-startStop-1:554 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:29:47  [ localhost-startStop-1:1116 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 1103 ms
+2017-11-22 14:29:47  [ localhost-startStop-1:1162 ] - [ INFO ]  FrameworkServlet 'taotao-manager-web': initialization started
+2017-11-22 14:29:47  [ localhost-startStop-1:1164 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'taotao-manager-web-servlet': startup date [Wed Nov 22 14:29:47 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:29:47  [ localhost-startStop-1:1164 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:29:47  [ localhost-startStop-1:1320 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:29:48  [ localhost-startStop-1:1476 ] - [ INFO ]  Mapped "{[/sendEmail.do]}" onto public void com.wz.controller.Test.sendEmail(javax.servlet.http.HttpServletRequest,java.lang.String) throws com.wz.utils.AccountEmailException
+2017-11-22 14:29:48  [ localhost-startStop-1:1961 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'taotao-manager-web-servlet': startup date [Wed Nov 22 14:29:47 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:29:48  [ localhost-startStop-1:2023 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'taotao-manager-web-servlet': startup date [Wed Nov 22 14:29:47 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:29:48  [ localhost-startStop-1:2101 ] - [ INFO ]  Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-11-22 14:29:48  [ localhost-startStop-1:2226 ] - [ INFO ]  FrameworkServlet 'taotao-manager-web': initialization completed in 1064 ms
+2017-11-22 14:30:33  [ http-bio-80-exec-1:46851 ] - [ WARN ]  No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:30:36  [ http-bio-80-exec-8:49846 ] - [ WARN ]  No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:30:52  [ http-bio-80-exec-9:66336 ] - [ WARN ]  No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:31:34  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:31:34  [ localhost-startStop-1:101 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:31:34 CST 2017]; root of context hierarchy
+2017-11-22 14:31:34  [ localhost-startStop-1:132 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:31:34  [ localhost-startStop-1:273 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:31:34  [ localhost-startStop-1:288 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:31:34  [ localhost-startStop-1:335 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:31:34  [ localhost-startStop-1:507 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:31:34  [ localhost-startStop-1:523 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:31:34  [ localhost-startStop-1:523 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:31:35  [ localhost-startStop-1:992 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 986 ms
+2017-11-22 14:31:35  [ localhost-startStop-1:1028 ] - [ INFO ]  FrameworkServlet 'taotao-manager-web': initialization started
+2017-11-22 14:31:35  [ localhost-startStop-1:1029 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'taotao-manager-web-servlet': startup date [Wed Nov 22 14:31:35 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:31:35  [ localhost-startStop-1:1029 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:31:35  [ localhost-startStop-1:1170 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:31:35  [ localhost-startStop-1:1310 ] - [ INFO ]  Mapped "{[/sendEmail.do]}" onto public void com.wz.controller.Test.sendEmail(javax.servlet.http.HttpServletRequest,java.lang.String) throws com.wz.utils.AccountEmailException
+2017-11-22 14:31:35  [ localhost-startStop-1:1576 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'taotao-manager-web-servlet': startup date [Wed Nov 22 14:31:35 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:31:35  [ localhost-startStop-1:1623 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'taotao-manager-web-servlet': startup date [Wed Nov 22 14:31:35 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:31:35  [ localhost-startStop-1:1748 ] - [ INFO ]  Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-11-22 14:31:35  [ localhost-startStop-1:1794 ] - [ INFO ]  FrameworkServlet 'taotao-manager-web': initialization completed in 766 ms
+2017-11-22 14:31:57  [ http-bio-80-exec-1:23564 ] - [ WARN ]  No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:31:58  [ http-bio-80-exec-6:24659 ] - [ WARN ]  No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:31:59  [ http-bio-80-exec-7:25235 ] - [ WARN ]  No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:31:59  [ http-bio-80-exec-8:25436 ] - [ WARN ]  No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:31:59  [ http-bio-80-exec-9:25604 ] - [ WARN ]  No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'taotao-manager-web'
+2017-11-22 14:35:31  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:35:31  [ localhost-startStop-1:98 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:35:31 CST 2017]; root of context hierarchy
+2017-11-22 14:35:31  [ localhost-startStop-1:145 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:35:31  [ localhost-startStop-1:286 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:35:31  [ localhost-startStop-1:332 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:35:31  [ localhost-startStop-1:379 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:35:32  [ localhost-startStop-1:582 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:35:32  [ localhost-startStop-1:598 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:35:32  [ localhost-startStop-1:598 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:35:32  [ localhost-startStop-1:1252 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 1249 ms
+2017-11-22 14:35:32  [ localhost-startStop-1:1302 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization started
+2017-11-22 14:35:32  [ localhost-startStop-1:1304 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:35:32 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:35:32  [ localhost-startStop-1:1304 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:35:33  [ localhost-startStop-1:1475 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:35:33  [ localhost-startStop-1:1679 ] - [ INFO ]  Mapped "{[/index]}" onto public java.lang.String com.wz.controller.Test.ss()
+2017-11-22 14:35:33  [ localhost-startStop-1:1679 ] - [ INFO ]  Mapped "{[/sendEmail.do]}" onto public void com.wz.controller.Test.sendEmail(javax.servlet.http.HttpServletRequest,java.lang.String) throws com.wz.utils.AccountEmailException
+2017-11-22 14:35:33  [ localhost-startStop-1:1976 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:35:32 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:35:33  [ localhost-startStop-1:2038 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:35:32 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:35:33  [ localhost-startStop-1:2132 ] - [ INFO ]  Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-11-22 14:35:33  [ localhost-startStop-1:2194 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization completed in 892 ms
+2017-11-22 14:37:00  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:37:00  [ localhost-startStop-1:83 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:37:00 CST 2017]; root of context hierarchy
+2017-11-22 14:37:00  [ localhost-startStop-1:130 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:37:00  [ localhost-startStop-1:255 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:37:00  [ localhost-startStop-1:286 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:37:00  [ localhost-startStop-1:333 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:37:00  [ localhost-startStop-1:505 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:37:00  [ localhost-startStop-1:521 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:37:00  [ localhost-startStop-1:521 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:37:01  [ localhost-startStop-1:1052 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 1048 ms
+2017-11-22 14:37:01  [ localhost-startStop-1:1094 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization started
+2017-11-22 14:37:01  [ localhost-startStop-1:1096 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:37:01 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:37:01  [ localhost-startStop-1:1096 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:37:01  [ localhost-startStop-1:1236 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:37:01  [ localhost-startStop-1:1393 ] - [ INFO ]  Mapped "{[/sendEmail.do]}" onto public void com.wz.controller.Test.sendEmail(javax.servlet.http.HttpServletRequest,java.lang.String) throws com.wz.utils.AccountEmailException
+2017-11-22 14:37:01  [ localhost-startStop-1:1393 ] - [ INFO ]  Mapped "{[/index]}" onto public java.lang.String com.wz.controller.Test.ss()
+2017-11-22 14:37:01  [ localhost-startStop-1:1658 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:37:01 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:37:02  [ localhost-startStop-1:1721 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:37:01 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:37:02  [ localhost-startStop-1:1799 ] - [ INFO ]  Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-11-22 14:37:02  [ localhost-startStop-1:1861 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization completed in 767 ms
+2017-11-22 14:37:28  [ http-bio-8080-exec-7:28345 ] - [ WARN ]  No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'Sendemail'
+2017-11-22 14:40:00  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:40:01  [ localhost-startStop-1:142 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:40:01 CST 2017]; root of context hierarchy
+2017-11-22 14:40:01  [ localhost-startStop-1:204 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:40:01  [ localhost-startStop-1:407 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:40:01  [ localhost-startStop-1:439 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:40:01  [ localhost-startStop-1:517 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:40:01  [ localhost-startStop-1:767 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:40:01  [ localhost-startStop-1:782 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:40:01  [ localhost-startStop-1:782 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:40:02  [ localhost-startStop-1:1361 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 1345 ms
+2017-11-22 14:40:02  [ localhost-startStop-1:1402 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization started
+2017-11-22 14:40:02  [ localhost-startStop-1:1403 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:40:02 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:40:02  [ localhost-startStop-1:1403 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:40:02  [ localhost-startStop-1:1547 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:40:02  [ localhost-startStop-1:1719 ] - [ INFO ]  Mapped "{[/index]}" onto public java.lang.String com.wz.controller.Test.ss()
+2017-11-22 14:40:02  [ localhost-startStop-1:1719 ] - [ INFO ]  Mapped "{[/sendEmail]}" onto public void com.wz.controller.Test.sendEmail(javax.servlet.http.HttpServletRequest,java.lang.String) throws com.wz.utils.AccountEmailException
+2017-11-22 14:40:02  [ localhost-startStop-1:2063 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:40:02 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:40:03  [ localhost-startStop-1:2125 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:40:02 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:40:03  [ localhost-startStop-1:2219 ] - [ INFO ]  Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-11-22 14:40:03  [ localhost-startStop-1:2281 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization completed in 879 ms
+2017-11-22 14:43:21  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:43:21  [ localhost-startStop-1:90 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:43:21 CST 2017]; root of context hierarchy
+2017-11-22 14:43:21  [ localhost-startStop-1:137 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:43:21  [ localhost-startStop-1:262 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:43:21  [ localhost-startStop-1:278 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:43:21  [ localhost-startStop-1:325 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:43:21  [ localhost-startStop-1:512 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:43:21  [ localhost-startStop-1:528 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:43:21  [ localhost-startStop-1:528 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:43:22  [ localhost-startStop-1:1083 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 1072 ms
+2017-11-22 14:43:22  [ localhost-startStop-1:1113 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization started
+2017-11-22 14:43:22  [ localhost-startStop-1:1114 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:43:22 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:43:22  [ localhost-startStop-1:1114 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:43:22  [ localhost-startStop-1:1254 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:43:22  [ localhost-startStop-1:1411 ] - [ INFO ]  Mapped "{[/index]}" onto public java.lang.String com.wz.controller.Test.ss()
+2017-11-22 14:43:22  [ localhost-startStop-1:1411 ] - [ INFO ]  Mapped "{[/sendEmail]}" onto public void com.wz.controller.Test.sendEmail(javax.servlet.http.HttpServletRequest,java.lang.String) throws com.wz.utils.AccountEmailException
+2017-11-22 14:43:23  [ localhost-startStop-1:1739 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:43:22 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:43:23  [ localhost-startStop-1:1786 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:43:22 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:43:23  [ localhost-startStop-1:1864 ] - [ INFO ]  Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-11-22 14:43:23  [ localhost-startStop-1:1926 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization completed in 813 ms
+2017-11-22 14:47:59  [ localhost-startStop-1:0 ] - [ INFO ]  Root WebApplicationContext: initialization started
+2017-11-22 14:47:59  [ localhost-startStop-1:161 ] - [ INFO ]  Refreshing Root WebApplicationContext: startup date [Wed Nov 22 14:47:59 CST 2017]; root of context hierarchy
+2017-11-22 14:47:59  [ localhost-startStop-1:265 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-dao.xml]
+2017-11-22 14:48:00  [ localhost-startStop-1:589 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-jedis.xml]
+2017-11-22 14:48:00  [ localhost-startStop-1:633 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-service.xml]
+2017-11-22 14:48:00  [ localhost-startStop-1:742 ] - [ INFO ]  Loading XML bean definitions from file [E:\StudyKejian\JAVA_Eight\Sendemail\target\classes\spring\applicationContext-trans.xml]
+2017-11-22 14:48:00  [ localhost-startStop-1:1006 ] - [ WARN ]  No MyBatis mapper was found in '[com.wz.mapper.*]' package. Please check your configuration.
+2017-11-22 14:48:00  [ localhost-startStop-1:1026 ] - [ INFO ]  Loading properties file from class path resource [properties/db.properties]
+2017-11-22 14:48:00  [ localhost-startStop-1:1038 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:48:01  [ localhost-startStop-1:2083 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 2083 ms
+2017-11-22 14:48:01  [ localhost-startStop-1:2117 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization started
+2017-11-22 14:48:01  [ localhost-startStop-1:2124 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:48:01 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:48:01  [ localhost-startStop-1:2124 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/springmvc.xml]
+2017-11-22 14:48:02  [ localhost-startStop-1:2300 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-22 14:48:02  [ localhost-startStop-1:2560 ] - [ INFO ]  Mapped "{[/index]}" onto public java.lang.String com.wz.controller.Test.ss()
+2017-11-22 14:48:02  [ localhost-startStop-1:2560 ] - [ INFO ]  Mapped "{[/sendEmail]}" onto public void com.wz.controller.Test.sendEmail(javax.servlet.http.HttpServletRequest,java.lang.String) throws com.wz.utils.AccountEmailException
+2017-11-22 14:48:02  [ localhost-startStop-1:2961 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:48:01 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:48:02  [ localhost-startStop-1:3017 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'Sendemail-servlet': startup date [Wed Nov 22 14:48:01 CST 2017]; parent: Root WebApplicationContext
+2017-11-22 14:48:02  [ localhost-startStop-1:3117 ] - [ INFO ]  Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2017-11-22 14:48:02  [ localhost-startStop-1:3177 ] - [ INFO ]  FrameworkServlet 'Sendemail': initialization completed in 1060 ms

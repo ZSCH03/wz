@@ -1,0 +1,1 @@
+!function(){function a(a){return a.hasAttribute?a.src:a.getAttribute("src",4)}var b=document.getElementsByTagName("script"),c=a(b[b.length-1]),d=c.substring(0,c.lastIndexOf("/"));seajs.config({paths:{myloan:d}}),$(function(){$("body").append('<script src="//g.alicdn.com/fi/act/c/2015/11/common/js/main-min.js"></script>')})}();
